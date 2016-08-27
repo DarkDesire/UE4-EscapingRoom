@@ -1,0 +1,15 @@
+#### Unreal Engine
+
+## Default
+Intermediate/
+Saved/
+Binaries/
+DerivedDataCache/
+
+## Extra
+Content/StarterContent/
+
+### Visual Studio
+
+## Default
+*.VC.db
