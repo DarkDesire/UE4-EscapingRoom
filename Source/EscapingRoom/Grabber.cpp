@@ -25,6 +25,17 @@ void UGrabber::BeginPlay()
   FString ObjectName = GetOwner()->GetName();
   UE_LOG( LogTemp, Warning, TEXT( "Grabber is working in %s" ), *ObjectName );
   PlayerController = GetWorld()->GetFirstPlayerController();
+
+  /// Look for attached Physics Handle
+  PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+
+  if ( PhysicsHandle ) {
+  
+  }
+  else 
+  {
+    UE_LOG( LogTemp, Error, TEXT( "Didn't find a PhysicsHandle in Pawn: %s" ), *(GetOwner()->GetName()) );
+  }
 }
 
 

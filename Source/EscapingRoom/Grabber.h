@@ -29,5 +29,7 @@ public:
 private:
 
   APlayerController* PlayerController;
+  
+  UPhysicsHandleComponent* PhysicsHandle = nullptr;
 
 };
