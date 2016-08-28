@@ -33,17 +33,14 @@ private:
   float OpenAngle = -90.f;
 
   UPROPERTY( EditAnywhere )
-  ATriggerVolume* PressurePlate;
+  ATriggerVolume* PressurePlate = nullptr;
 
   UPROPERTY( EditAnywhere )
-  float DoorCloseDelay = 2.f;
+  float DoorCloseDelay = 0.3f;
 
   UPROPERTY( EditAnywhere )
   float MassNeedForOpenDoor = 30.f;
 
   UPROPERTY( VisibleAnywhere )
   float LastDoorOpenTime;
-
-  AActor* Owner; // the door owning Actor
-
 };
