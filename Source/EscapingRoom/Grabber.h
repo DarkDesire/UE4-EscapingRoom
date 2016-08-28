@@ -27,12 +27,15 @@ public:
 
 	
 private:
+  // Used for saving ViewPortLocation
+  FVector PlayerViewPointLocation;
+  // Used for saving ViewPortRotation
+  FRotator PlayerViewPointRotation;
 
   UPhysicsHandleComponent* PhysicsHandle = nullptr;
-
   UInputComponent* InputComponent = nullptr;
 
-  // Ray-cast and grab what's in reach
+  // Ray-cast what's in reach and grab it
   void Grab();
 
   // Called when grab is released
@@ -46,4 +49,14 @@ private:
 
   // Return hit for first physics body in reach
   const FHitResult GetFirstPhysicsBodyInReach();
+
+
+  // Reutrn current start of reach line
+  FVector GetReachLineStart();
+
+  // Reutrn current end of reach line
+  FVector GetReachLineEnd();
+
+  //Get fresh player view port
+  void GetPlayerViewPort();
 };
