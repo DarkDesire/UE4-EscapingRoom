@@ -38,6 +38,4 @@ private:
   UPROPERTY( EditAnywhere )
   float MassNeedForOpenDoor = 30.f;
 
-  UPROPERTY( VisibleAnywhere )
-  float LastDoorOpenTime;
 };
